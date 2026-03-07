@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Issues Tracker</title>
+    <title>GitHub Issues Tracker | Dashboard</title>
 
     <!-- tailwind-daisyui -->
     <link
@@ -62,5 +62,31 @@
         </button>
       </div>
     </nav>
+
+        <section class="w-[1110px] m-auto my-14" >
+    <!-- Filters -->
+    <div class="p-6 lg:text-left text-center space-x-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-lg">
+      <button
+        onclick="loadIssues('all')"
+        class="bg-blue-700 border border-gray-200 text-white h-10 w-30 text-sm rounded-sm cursor-pointer"
+      >
+        All
+      </button>
+      <button
+        onclick="loadIssues('open')"
+        class="bg-white border border-gray-200 h-10 w-30 text-sm rounded-sm cursor-pointer hover:text-blue-600"
+        
+      >
+        Open
+      </button>
+      <button
+        onclick="loadIssues('closed')"
+        class="bg-white border border-gray-200 h-10 w-30 text-sm rounded-sm cursor-pointer hover:text-blue-600"
+        id="rejected-filter-btn"
+      >
+        Closed
+      </button>
+    </div>
+    </section>
   </body>
 </html>
