@@ -5,7 +5,7 @@ function login() {
   if (username === "admin" && password === "admin123") {
     localStorage.setItem("login", true);
 
-    window.location.href = "index.html";
+    window.location.href = "dashboard.html";
   } else {
     alert("Invaild Username or Password");
   }
