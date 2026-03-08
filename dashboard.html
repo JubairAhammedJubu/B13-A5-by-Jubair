@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Issues Tracker | Dashboard</title>
+    <title>GitHub Issues Tracker</title>
 
     <!-- tailwind-daisyui -->
     <link
@@ -37,9 +37,8 @@
   </head>
 
   <body>
-    <nav class="navbar w-[1600px] px-20 m-auto bg-base-100 shadow-sm">
+    <nav class="navbar max-w-[1600px] w-full px-20 m-auto bg-base-100 shadow-sm">
       <div class="flex-1 flex items-center gap-2">
-        
         <div class="avatar">
           <div class="w-10 rounded-full">
             <img src="assets/github-logo.png" />
@@ -56,34 +55,34 @@
           type="text"
           placeholder="Search issues..."
           class="input input-bordered w-24 md:w-auto"
+          id="search"
         />
-        <button class="btn btn-primary hover:opacity-80">
+        <button class="btn btn-primary hover:opacity-80" id="searchBtn">
           <i class="fa-solid fa-plus"></i>New Issue
         </button>
       </div>
     </nav>
 
-    <section class="w-[1110px] mx-auto my-14">
+    <section class="max-w-[1110px] w-full mx-auto my-14">
       <!-- Buttons -->
       <div
         class="p-6 lg:text-left text-center space-x-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-lg"
       >
-        <button
+        <button id="allBtn"
           onclick="loadIssues('all')"
-          class="bg-blue-700 border border-zinc-200 text-white h-10 w-30 text-sm rounded-sm cursor-pointer"
+          class="bg-blue-700 border border-zinc-200 text-white h-10 w-30 text-sm rounded-sm cursor-pointer "
         >
           All
         </button>
-        <button
+        <button id="openBtn"
           onclick="loadIssues('open')"
-          class="bg-white border border-zinc-200 h-10 w-30 text-sm rounded-sm cursor-pointer hover:text-blue-600"
+          class="bg-white border border-zinc-200 h-10 w-30 text-sm rounded-sm cursor-pointer"
         >
           Open
         </button>
-        <button
+        <button id="closedBtn"
           onclick="loadIssues('closed')"
-          class="bg-white border border-gray-200 h-10 w-30 text-sm rounded-sm cursor-pointer hover:text-blue-600"
-          id="rejected-filter-btn"
+          class="bg-white border border-gray-200 h-10 w-30 text-sm rounded-sm cursor-pointer"
         >
           Closed
         </button>
@@ -127,9 +126,11 @@
 
         <!-- Issues Container -->
         <div id="container" class="grid grid-cols-4 gap-3 p-6 bg-gray-50"></div>
-      </div>
-      
-      <!-- DaisyUI Modal -->
+        </div>
+     
+    </section>
+    
+<!-- DaisyUI Modal -->
 <dialog id="issueModal" class="modal">
 
   <div class="modal-box bg-white max-w-[700px] rounded-2xl shadow-lg p-8">
@@ -193,6 +194,6 @@
 
 </dialog>
 
-    </section>
+    <script src="js/dashboard.js"></script>
   </body>
 </html>
