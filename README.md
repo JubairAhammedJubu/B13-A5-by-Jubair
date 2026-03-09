@@ -1,6 +1,3 @@
-Here’s your content rewritten in a **README-friendly format** with proper Markdown styling:
-
----
 
 # JavaScript ES6 Concepts Cheat Sheet
 
