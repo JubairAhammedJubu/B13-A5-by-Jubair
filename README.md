@@ -6,12 +6,12 @@ Here’s your content rewritten in a **README-friendly format** with proper Mark
 
 ## 1. Difference Between `var`, `let`, and `const`
 
-| Feature   | `var`          | `let`        | `const`                               |
-| --------- | -------------- | ------------ | ------------------------------------- |
-| Scope     | Function Scope | Block Scope  | Block Scope                           |
-| Redeclare | Possible       | Not possible | Not possible                          |
-| Reassign  | Possible       | Possible     | Not possible after initial assignment |
-| Update    | Allowed        | Allowed      | Not allowed                           |
+| var                       | let                       | const                               |
+| ------------------------- | ------------------------- | ----------------------------------- |
+| Function Scope            | Block Scope               | Block Scope                         |
+| Redeclare possible        | Redeclare not possible    | Redeclare not possible              |
+| Reassign possible         | Reassign possible         | cannot reassign after initial assignment |
+| Update allow              | Update allow              | Update not allow                    |
 
 ---
 
@@ -50,8 +50,7 @@ const updatedUser = {...user, role: 'admin'};
 
 ## 3. Difference Between `map()`, `filter()`, and `forEach()`
 
-| Method      | Purpose                            | Returns                           | Original Array                                    | Notes                                           |
-| ----------- | ---------------------------------- | --------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
+
 | `map()`     | Transforms each item in the array  | New array of same length          | Does not change unless callback modifies it       | Useful for applying operations to every element |
 | `filter()`  | Selects items based on a condition | New array (length may be smaller) | Original array stays unchanged                    | Useful for filtering data                       |
 | `forEach()` | Loops through the array            | `undefined` (no new array)        | Original array unchanged (callback can affect it) | Mainly for side-effects like logging            |
