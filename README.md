@@ -101,7 +101,7 @@ const simple = `Hello World`;
 
 ```javascript
 const name = "Alice";
-console.log(`Hello, ${name}!`); // "Hello, Alice!"
+console.log(`Hello, ${name}!`); 
 ```
 
 * **Multi-line Strings:**
@@ -116,13 +116,8 @@ This is line two.`;
 ```javascript
 const a = 5;
 const b = 10;
-console.log(`Sum: ${a + b}`); // "Sum: 15"
+console.log(`Sum: ${a + b}`); 
 ```
 
 ---
 
-This README format is clean, easy to read, and perfect for documentation or GitHub projects.
-
-If you want, I can also make a **version with colored code blocks and badges** to make it look even more like a professional GitHub README.
-
-Do you want me to do that?
