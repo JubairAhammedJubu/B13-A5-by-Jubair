@@ -4,6 +4,7 @@ const searchBtn = document.getElementById("searchBtn");
 const allBtn = document.getElementById("allBtn");
 const openBtn = document.getElementById("openBtn");
 const closedBtn = document.getElementById("closedBtn");
+const loader = document.getElementById("loader");
 
 searchBtn.addEventListener("click", searchIssue);
 
@@ -35,6 +36,8 @@ async function loadIssues(type = "all") {
     closedBtn.classList.add("bg-blue-700", "text-white");
   }
 
+  loader.classList.remove("hidden");
+
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
@@ -48,6 +51,7 @@ async function loadIssues(type = "all") {
 
   showIssues(issues);
   document.getElementById("issueCount").innerText = `${issues.length} Issues`;
+  loader.classList.add("hidden");
 }
 
 // showIssues
@@ -123,6 +127,8 @@ function showIssues(issues) {
 
 // Search
 async function searchIssue() {
+
+  loader.classList.remove("hidden");
   const text = document.getElementById("search").value;
 
   const res = await fetch(
@@ -135,6 +141,8 @@ async function searchIssue() {
 
   document.getElementById("issueCount").innerText =
     data.data.length + " Issues";
+  
+  loader.classList.add("hidden");
 }
 
 // Open Modal
