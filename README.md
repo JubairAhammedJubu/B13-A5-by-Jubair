@@ -51,9 +51,12 @@ const updatedUser = {...user, role: 'admin'};
 ## 3. Difference Between `map()`, `filter()`, and `forEach()`
 
 
-| `map()`     | Transforms each item in the array  | New array of same length          | Does not change unless callback modifies it       | Useful for applying operations to every element |
-| `filter()`  | Selects items based on a condition | New array (length may be smaller) | Original array stays unchanged                    | Useful for filtering data                       |
-| `forEach()` | Loops through the array            | `undefined` (no new array)        | Original array unchanged (callback can affect it) | Mainly for side-effects like logging            |
+| map()                             | filter()                               | forEach()                                                   |
+| --------------------------------- | -------------------------------------- | ----------------------------------------------------------- |
+| Transform each the array           | Selects some items based on a condition | Just loops through the array                                |
+| Returns a same length new array    | Returns a new array based on a condition | Does not return a new array                                 |
+| Does not change the original array unless the callback function changes | Does not change the original array | Does not change the original array by itself, but the callback function can affect it |
+| Same length as the original array  | Length can be smaller than the original | Original array stays same length                             |
 
 ---
 
